@@ -6,8 +6,10 @@ const sdk = new BeehiivSDK();
 
 (async () => {
   try {
-    const emailBlasts = await sdk.emailBlasts.getAllEmailBlasts();
-    console.log('Email Blasts:', emailBlasts);
+    // Retrieve a specific segment by ID
+    const segmentId = 'your-segment-id';
+    const segment = await sdk.segments.getSegmentById(segmentId);
+    console.log('Segment:', segment);
   } catch (error) {
     console.error('Error:', error);
   }

@@ -6,8 +6,9 @@ const sdk = new BeehiivSDK();
 
 (async () => {
   try {
-    const emailBlasts = await sdk.emailBlasts.getAllEmailBlasts();
-    console.log('Email Blasts:', emailBlasts);
+    // Retrieve all segments
+    const segments = await sdk.segments.getAllSegments();
+    console.log('Segments:', segments);
   } catch (error) {
     console.error('Error:', error);
   }

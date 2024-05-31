@@ -6,8 +6,8 @@ const sdk = new BeehiivSDK();
 
 (async () => {
   try {
-    const emailBlasts = await sdk.emailBlasts.getAllEmailBlasts();
-    console.log('Email Blasts:', emailBlasts);
+    const referralProgram = await sdk.referralProgram.getReferralProgram();
+    console.log('Referral Program:', referralProgram);
   } catch (error) {
     console.error('Error:', error);
   }

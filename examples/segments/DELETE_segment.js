@@ -6,8 +6,10 @@ const sdk = new BeehiivSDK();
 
 (async () => {
   try {
-    const emailBlasts = await sdk.emailBlasts.getAllEmailBlasts();
-    console.log('Email Blasts:', emailBlasts);
+    // Delete a specific segment by ID
+    const segmentId = 'your-segment-id';
+    const response = await sdk.segments.deleteSegment(segmentId);
+    console.log('Delete response:', response);
   } catch (error) {
     console.error('Error:', error);
   }
